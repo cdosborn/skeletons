@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+This is an example plist, which when loaded runs /path/to/command
+every 300 seconds. To run system wide, prepend sudo to launch and 
+move to /Library instead of ~/Library.
+
+To permanently start:
+launchctl load ~/Library/LaunchAgents/com.example.plist
+
+To permanently stop:
+launchctl unload ~/Library/LaunchAgents/com.example.plist
+
+Alternatively by the plist label:
+launchctl start com.example.label
+launchctl stop com.example.label
+
+-->
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+
+<dict>
+
+    <key>Label</key>
+
+    <string>com.example.label</string>
+
+    <key>ProgramArguments</key>
+
+    <array>
+
+        <string>/path/to/command</string>
+
+    </array>
+
+    <key>StartInterval</key>
+
+        <integer>300</integer>
+
+</dict>
+
+</plist>
